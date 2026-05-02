@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAGL - Prague Glass Experience</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Glass Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- PAGE 1: LANGUAGE SELECTION (Based strictly on Image 1) -->
+    <div id="entry-overlay">
+        <!-- Abstract blurred background for the entry page -->
+        <div class="entry-bg-blur"></div>
+        
+        <div class="entry-content">
+            <!-- Logo area -->
+            <div class="pragl-logo-container">
+                <h1 class="pragl-logo-text">PRAGL</h1>
+            </div>
+            
+            <!-- Red headline from image -->
+            <h2 class="entry-headline">Experience a<br>fascinating story<br>of glass</h2>
+            
+            <!-- Sub-headline -->
+            <p class="entry-subheadline">Prague Glass Experience</p>
+            
+            <!-- Language Buttons -->
+            <div class="lang-select">
+                <button class="lang-btn" data-sound id="lang-en">ENGLISH</button>
+                <button class="lang-btn" data-sound id="lang-cs">ČESKY</button>
+            </div>
+        </div>
+
+        <!-- Bottom Social Links -->
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-btn">f</a>
+            <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
+        </div>
+    </div>
+
+    <!-- MAIN SITE CONTENT (Hidden until language is selected) -->
+    <div id="main-site" class="hidden">
+        
+        <!-- Navigation Header -->
+        <nav id="main-nav">
+            <div class="nav-logo-small">
+                PRAGL<br><span>Prague Glass Experience</span>
+            </div>
+            <!-- Canvas for the RGB abstract spiral hamburger -->
+            <button id="menu-btn" data-sound aria-label="Open menu">
+                <canvas id="menu-canvas" width="50" height="50"></canvas>
+            </button>
+        </nav>
+
+        <!-- Full Screen / Side Menu Drawer (Based strictly on Image 2) -->
+        <div id="drawer-overlay"></div>
+        <div id="drawer">
+            <div class="drawer-header">
+                <div class="nav-logo-small">
+                    PRAGL<br><span>Prague Glass Experience</span>
+                </div>
+            </div>
+
+            <!-- Menu list matching the second image exactly -->
+            <ul class="drawer-links">
+                <li><a href="#about" data-sound class="menu-link highlight-red">About us</a></li>
+                <li><a href="#news" data-sound class="menu-link">News</a></li>
+                <li><a href="#glassworks" data-sound class="menu-link">Glass-works</a></li>
+                <li><a href="#shop" data-sound class="menu-link">Our Shop and Gallery</a></li>
+                <li><a href="#pricing" data-sound class="menu-link">Price list and reservations</a></li>
+                <li><a href="#contacts" data-sound class="menu-link">Contacts</a></li>
+            </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <!-- Scenic glass blower image & vignetting will be applied here in CSS -->
+            <div class="hero-bg"></div>
+            <div class="hero-vignette"></div>
+            
+            <!-- Tricolor (RGB) abstract blurred light bleeds -->
+            <div class="color-bleed cb-red"></div>
+            <div class="color-bleed cb-green"></div>
+            <div class="color-bleed cb-blue"></div>
+            
+            <div class="hero-content">
+                <div class="hero-panel glass-morphism">
+                    On a single spot in the heart of Prague you can discover the phenomenon of glass in many of its forms. 
+                    You can observe a unique collection of glass sculptures made by Czech and foreign artists. 
+                    You will feel the heat from a fully functional glassworks, where the masters of glass craft will show you their art.
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop & Gallery Section (Abstract Glass Cards) -->
+        <section id="shop" class="content-section">
+            <h2 class="section-title">Our Shop & Gallery</h2>
+            <div class="glass-grid">
+                <div class="glass-card abstract-shape">
+                    <h3>Forest Glass</h3>
+                    <p>Traditional forest glass of the highest level, exclusively from Czech glass manufactories.</p>
+                </div>
+                <div class="glass-card abstract-shape">
+                    <h3>Crystal Glass</h3>
+                    <p>Clear crystal glass handmade by glassmasters directly in our hotshop.</p>
+                </div>
+                <div class="glass-card abstract-shape">
+                    <h3>Recycled Glass</h3>
+                    <p>Pints of recycled glass — each guaranteed original in shape and concept.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
