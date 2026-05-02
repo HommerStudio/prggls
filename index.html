@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <!-- MAIN SITE CONTENT (Hidden until language is selected) -->
+    <!-- MAIN SITE CONTENT (Based strictly on Image 2) -->
     <div id="main-site" class="hidden">
         
         <!-- Navigation Header -->
@@ -64,17 +64,16 @@
             </button>
         </nav>
 
-        <!-- Full Screen / Side Menu Drawer (Based strictly on Image 2) -->
-        <div id="drawer-overlay"></div>
-        <div id="drawer">
-            <div class="drawer-header">
-                <div class="nav-logo-small">
-                    PRAGL<br><span>Prague Glass Experience</span>
-                </div>
-            </div>
+        <!-- Main Full-Screen Menu Page -->
+        <main id="main-menu-container">
+            
+            <!-- Tricolor (RGB) abstract blurred light bleeds for glass background -->
+            <div class="color-bleed cb-red"></div>
+            <div class="color-bleed cb-green"></div>
+            <div class="color-bleed cb-blue"></div>
 
-            <!-- Menu list matching the second image exactly -->
-            <ul class="drawer-links">
+            <!-- Centered large menu list matching Image 2 exactly -->
+            <ul class="fullscreen-menu-list">
                 <li><a href="#about" data-sound class="menu-link highlight-red">About us</a></li>
                 <li><a href="#news" data-sound class="menu-link">News</a></li>
                 <li><a href="#glassworks" data-sound class="menu-link">Glass-works</a></li>
@@ -82,46 +81,8 @@
                 <li><a href="#pricing" data-sound class="menu-link">Price list and reservations</a></li>
                 <li><a href="#contacts" data-sound class="menu-link">Contacts</a></li>
             </ul>
-        </div>
-
-        <!-- Hero Section -->
-        <section id="hero">
-            <!-- Scenic glass blower image & vignetting will be applied here in CSS -->
-            <div class="hero-bg"></div>
-            <div class="hero-vignette"></div>
             
-            <!-- Tricolor (RGB) abstract blurred light bleeds -->
-            <div class="color-bleed cb-red"></div>
-            <div class="color-bleed cb-green"></div>
-            <div class="color-bleed cb-blue"></div>
-            
-            <div class="hero-content">
-                <div class="hero-panel glass-morphism">
-                    On a single spot in the heart of Prague you can discover the phenomenon of glass in many of its forms. 
-                    You can observe a unique collection of glass sculptures made by Czech and foreign artists. 
-                    You will feel the heat from a fully functional glassworks, where the masters of glass craft will show you their art.
-                </div>
-            </div>
-        </section>
-
-        <!-- Shop & Gallery Section (Abstract Glass Cards) -->
-        <section id="shop" class="content-section">
-            <h2 class="section-title">Our Shop & Gallery</h2>
-            <div class="glass-grid">
-                <div class="glass-card abstract-shape">
-                    <h3>Forest Glass</h3>
-                    <p>Traditional forest glass of the highest level, exclusively from Czech glass manufactories.</p>
-                </div>
-                <div class="glass-card abstract-shape">
-                    <h3>Crystal Glass</h3>
-                    <p>Clear crystal glass handmade by glassmasters directly in our hotshop.</p>
-                </div>
-                <div class="glass-card abstract-shape">
-                    <h3>Recycled Glass</h3>
-                    <p>Pints of recycled glass — each guaranteed original in shape and concept.</p>
-                </div>
-            </div>
-        </section>
+        </main>
 
     </div>
 
