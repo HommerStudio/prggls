@@ -286,4 +286,182 @@ body {
 }
 
 .drawer-header {
-    mar
+    margin-bottom: 4rem;
+}
+
+.drawer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.drawer-links a {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.drawer-links a:hover {
+    color: var(--text-light);
+    transform: scale(1.05);
+}
+
+.drawer-links a.highlight-red {
+    color: var(--theme-red);
+    font-weight: 500;
+}
+
+/* =========================================
+   HERO SECTION & ABSTRACT ART
+========================================= */
+#hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    /* Scenic glassblowing background */
+    background: url('https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 10%, var(--bg-dark) 90%);
+    z-index: 1;
+}
+
+/* Tricolor Abstract Light Bleeds */
+.color-bleed {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    mix-blend-mode: screen;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cb-red {
+    background: var(--theme-red);
+    width: 50vw; height: 50vw;
+    top: -10%; left: -10%;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.cb-green {
+    background: var(--theme-green);
+    width: 40vw; height: 40vw;
+    bottom: 0; right: 10%;
+    animation: float 25s infinite alternate-reverse ease-in-out;
+}
+
+.cb-blue {
+    background: var(--theme-blue);
+    width: 60vw; height: 60vw;
+    top: 30%; left: 20%;
+    opacity: 0.2;
+    animation: float 30s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 50px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Glassy text implementation */
+.glass-morphism {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px; /* Soft, not blocky */
+    padding: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   CONTENT SECTIONS & ABSTRACT CARDS
+========================================= */
+.content-section {
+    position: relative;
+    z-index: 2;
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.glass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.glass-card {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: transform 0.4s, background 0.4s, border-color 0.4s;
+}
+
+/* Abstract Organic Shapes (Replacing Blocky Layout) */
+.abstract-shape {
+    border-radius: 80px 15px 80px 15px; /* Soft asymmetrical leaf shape */
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--glass-highlight);
+    border-radius: 15px 80px 15px 80px; /* shape morph on hover */
+}
+
+.glass-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--theme-red);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.glass-card p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
