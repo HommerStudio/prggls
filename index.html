@@ -19,11 +19,17 @@
     <div id="cursor"></div>
     <div id="cursor-dot"></div>
 
-    <!-- PAGE 1: LANGUAGE SELECTION (Based strictly on Image 1) -->
-    <div id="entry-overlay">
-        <!-- Abstract blurred background for the entry page -->
-        <div class="entry-bg-blur"></div>
-        
+    <!-- UNDERLYING SCENIC PICTURE & TONES -->
+    <div class="underlying-bg"></div>
+    <div class="underlying-vignette"></div>
+    
+    <!-- 3D FLOATING GLASS BALLS (Behind the UI, above the picture) -->
+    <div class="glass-ball gb-1"></div>
+    <div class="glass-ball gb-2"></div>
+    <div class="glass-ball gb-3"></div>
+
+    <!-- PAGE 1: LANGUAGE SELECTION -->
+    <div id="entry-overlay" class="glass-pane">
         <div class="entry-content">
             <!-- Logo area -->
             <div class="pragl-logo-container">
@@ -50,7 +56,7 @@
         </div>
     </div>
 
-    <!-- MAIN SITE CONTENT (Based strictly on Image 2) -->
+    <!-- MAIN SITE CONTENT -->
     <div id="main-site" class="hidden">
         
         <!-- Navigation Header -->
@@ -58,20 +64,13 @@
             <div class="nav-logo-small">
                 PRAGL<br><span>Prague Glass Experience</span>
             </div>
-            <!-- Canvas for the RGB abstract spiral hamburger -->
             <button id="menu-btn" data-sound aria-label="Open menu">
                 <canvas id="menu-canvas" width="50" height="50"></canvas>
             </button>
         </nav>
 
-        <!-- Main Full-Screen Menu Page -->
-        <main id="main-menu-container">
-            
-            <!-- Tricolor (RGB) abstract blurred light bleeds for glass background -->
-            <div class="color-bleed cb-red"></div>
-            <div class="color-bleed cb-green"></div>
-            <div class="color-bleed cb-blue"></div>
-
+        <!-- Main Full-Screen Menu Page (Glassy) -->
+        <main id="main-menu-container" class="glass-pane">
             <!-- Centered large menu list matching Image 2 exactly -->
             <ul class="fullscreen-menu-list">
                 <li><a href="#about" data-sound class="menu-link highlight-red">About us</a></li>
@@ -81,7 +80,6 @@
                 <li><a href="#pricing" data-sound class="menu-link">Price list and reservations</a></li>
                 <li><a href="#contacts" data-sound class="menu-link">Contacts</a></li>
             </ul>
-            
         </main>
 
     </div>
